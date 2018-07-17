@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_one :person, class_name: "person", foreign_key: "person_id"
     # Necessary to authenticate.
     has_secure_password
   
